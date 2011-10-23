@@ -1,0 +1,8 @@
+=======README FILE CONTENTS=======
+
+**Using the theme**
+
+2. Replace the CSS urls in the Page.ss file located at bluefader/templates/Page.ss to point to the specific CSS files on your server (example:http://mywebsite.com/silverstripe/themes/bluefader/css/layout.css).
+
+2. upload the bluefader folder to your themes directory and edit your config file for the 'bluefader' theme.
+

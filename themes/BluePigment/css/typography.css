@@ -1,0 +1,113 @@
+.typography a {
+	color: #003366;
+	background-color: inherit;
+	text-decoration: none;
+}
+.typography a:hover {
+	color: #FAA34B;
+	background-color: inherit;
+	text-decoration: underline;
+	border: none;
+}
+.typography h1, h2, h3 {
+	font: bold 1em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	color: #fff;
+}
+.typography h1 {
+	font-size: 2.5em;
+}
+.typography h2 {
+	font-size: 2em;
+	text-transform:uppercase;
+}
+.typography h3 {
+	font-size: 1.8em;
+}
+.typography p, h1, h2, h3 {
+	margin: 0;
+	padding: 10px 15px;
+}
+.typography #header-content h1#logo-text a {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	font: bold 58px 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	letter-spacing: -1px;
+	color: #fff;
+	text-decoration: none;
+	/* change the values of top and left to adjust the position of the logo*/
+	top: 30px;
+	left: 10px;
+}
+.typography #header-content #header-links a {
+	color: #93C9F4;
+	text-decoration: none;
+}
+.typography #header-content #header-links a:hover {
+	color: #fff;
+}
+.typography #nav ul li a {
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+.typography #nav ul li a:hover, #nav ul li a:active {
+	color: #333;
+}
+.typography #nav ul li#current {
+	background: url(../images/nav-current.jpg) no-repeat center bottom;
+}
+.typography #nav ul li#current a {
+	color: #333;
+}
+.typography #sidebar h1 {
+	font: bold 1.75em 'Trebuchet MS', Tahoma, Arial, Sans-serif;
+	padding: .3em 0 .5em 10px;
+	color: #002368;
+}
+.typography #sidebar ul.sidemenu li a {
+	display: block;
+	font-weight: bold;
+	color: #E8F4FF;
+	text-decoration: none;
+	padding: .2em 0 .2em 30px;
+	line-height: 1.5em;
+	font-size: 1.35em;
+}
+.typography #sidebar ul.sidemenu li a:hover {
+	background: #0F7ACC url(../images/sidebullet.gif) no-repeat .25em .45em;
+	color: #FFF;
+}
+.typography #main h1 {
+	font: bold 2.8em 'Trebuchet MS', Arial, Sans-serif;
+	color: #B1E100;
+	letter-spacing: -2px;
+	padding-bottom: 0;
+}
+.typography #main h1 a {
+	color: #B1E100;
+	text-decoration: none;
+}
+.typography #footer-wrap a {
+	text-decoration: none;
+	color: #5B9CFF;
+	font-weight: bold;
+}
+.typography #footer-wrap a:hover {
+	color: #E8F4FF;
+}
+.typography #footer-wrap p {
+	padding: 10px 0;
+}
+.typography #footer-wrap h2 {
+	color: #E8F4FF;
+	margin: 0;
+	padding: 0 10px;
+	text-transform: none;
+}

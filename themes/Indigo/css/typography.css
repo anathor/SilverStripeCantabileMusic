@@ -1,0 +1,61 @@
+.typography a {
+	color: #F70;
+}
+.typography a:hover {
+	color: #C60;
+}
+.typography h1 {
+	font-size: 1.4em;
+	margin-bottom: 4px;
+}
+.typography h1, h2, h3 {
+	color: #06C;
+	padding-top: 6px;
+}
+.typography .title h1 {
+	color: #FFF;
+	font: normal 2em Verdana, sans-serif;
+}
+.typography .navigation a {
+	color: #FFF;
+	float: left;
+	font: bold 1.2em "Trebuchet MS", sans-serif;
+	margin-top: 56px;
+	padding: 8px 18px;
+	text-align: center;
+	text-decoration: none;
+}
+.typography .navigation a:hover {
+	background-color: #4A91C3;
+	color: #FFF;
+}
+.typography .sidenav h1 {
+	border-bottom: 1px dashed #DDD;
+	color: #E73;
+	font-size: 1.2em;
+	height: 20px;
+	margin-top: 1.2em;
+}
+.typography .sidenav li a {
+	color: #777;
+	display: block;
+	font-size: 0.9em;
+	padding: 3px 6px 3px 18px;
+	text-decoration: none;
+}
+.typography .sidenav li a:hover {
+	color: #111;
+	background: url(../images/nav_li.gif) no-repeat;
+}
+.typography .content .descr {
+	color: #C60;
+	margin-bottom: 6px;
+}
+.typography .footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+.typography .footer a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}

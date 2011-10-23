@@ -1,0 +1,13 @@
+input {
+	color: #555;
+	font: normal 1.1em "Lucida Sans Unicode", sans-serif;
+}
+.styled {
+	border: 3px double #E5E5E5;
+	padding: 2px 3px;
+}
+.button {
+	border: 1px solid #AAA;
+	margin-left: 5px;
+	padding: 2px 3px;
+}

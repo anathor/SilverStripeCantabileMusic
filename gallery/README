@@ -1,0 +1,35 @@
+###############################################
+Gallery Module
+###############################################
+
+Maintainer Contact
+-----------------------------------------------
+Josh Kosmala (Nickname: jkosmala)
+<josh (at) silverstripe (dot) com>
+
+Requirements
+-----------------------------------------------
+
+Documentation
+-----------------------------------------------
+http://doc.silverstripe.com/doku.php?id=modules:gallery
+
+Installation Instructions
+-----------------------------------------------
+1. Place this directory in the root of your SilverStripe installation
+I.e. you will now have the following root folders
+
+assets
+mysite
+cms
+jsparty
+sapphire
+gallery
+
+2. Run /db/build/
+
+3. The CMS should now have a new "GalleryPage" page type.
+Add one and visit it on the public site.
+
+Usage Overview
+-----------------------------------------------

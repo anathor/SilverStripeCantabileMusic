@@ -1,0 +1,1 @@
+<p> &copy; 2006 <strong>Your Company</strong> | Design by: <a href="http://www.styleshout.com/">styleshout</a>. Theme by <a href="http://silverstripe.com/ForumMemberProfile/show/2627">grilldan</a>.</p>

@@ -1,0 +1,94 @@
+#BlogContent {
+	width: 355px;
+	float: right; 	
+	/*margin: 0;*/
+	text-align: left;
+	/*width: 540px;*/
+	margin-right: 126px;
+}
+
+.BlogError {
+	text-align: center;
+}
+/* IE cuts the bottom of the tags off */
+* html #Sidebar p.tagcloud {
+	padding-bottom: 10px;
+}
+.BlogError p {
+	color: #fff;
+	display: inline;
+	background-color: #f77;
+	padding: 7px;
+	font-weight:bold;
+}
+
+#BlogEntry_Form_BlogEntryForm #ContentLabel{
+	display:inline;
+}
+
+#BlogEntry_Form_BlogEntryForm .CompositeField {
+	position: relative;
+	width: 100%;
+}
+
+#BlogEntry_Form_BlogEntryForm #BBCodeHint {
+	cursor: pointer;
+	font-size:0.8em;
+	position: absolute;
+	left: 240px;
+	top: 3px;
+}
+#BlogEntry_Form_BlogEntryForm #BBTagsHolder{
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 325px;
+}
+.blogSummary {
+	/*border-bottom: 1px solid #ddd;*/
+	padding-bottom: 18px;
+	margin-bottom: 8px;
+	background: url(../images/new/post_cap.png) no-repeat bottom center;
+}
+	.blogSummary h2 a {
+		color: #b1985b;
+	}
+#Content label{
+	margin-top: 0px;
+}
+#Layout p.authorDate,
+#Layout p.tags {
+	font-size: 0.9em;
+	color: #797b7d;
+	margin: -15px 0 12px 0;
+}
+.tagcloud .not-popular { font-size: 1em; color: #546142 !important; }
+.tagcloud .not-very-popular { font-size: 1.3em; color: #708257 !important; }
+.tagcloud .somewhat-popular { font-size: 1.6em; color: #91a673 !important; }
+.tagcloud .popular { font-size: 1.9em; color: #91a673 !important; }
+.tagcloud .very-popular { font-size: 2.2em; color: #a1d457 !important; }
+.tagcloud .ultra-popular { font-size: 2.5em; color: #d2edab !important; }
+
+p.blogVitals {
+	text-align: center;
+	margin: 0;
+	color: #999;
+}
+/*a.comments {
+	background: url(../images/comments.gif) no-repeat left center;
+	padding: 3px 0 3px 25px;
+}
+a.readmore {
+	background: url(../images/readmore.gif) no-repeat left center;
+	padding: 3px 0 3px 25px;
+}*/
+
+a#editpost{
+	background: url(../images/edit.gif) no-repeat left center;
+	padding: 3px 0 3px 25px;
+}
+
+a#unpublishpost{
+	background: url(../images/delete.gif) no-repeat left center;
+	padding: 3px 0 3px 25px;
+}

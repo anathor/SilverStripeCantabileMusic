@@ -1,0 +1,38 @@
+#Navigation li, a {
+	display: inline;
+	zoom: 1;
+}
+#Navigation ul { text-align: center; }
+
+/* transparent PNG fixes */
+
+html {
+	background: #434b36;
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/topstripe.png", sizingMethod="crop");
+	zoom: 1;
+}
+#ContentBgContainer {
+	background: none;
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/content_bg.png", sizingMethod="crop");
+	zoom: 1;
+}
+#Header {
+	/*background: none;*/
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/header_bg.png", sizingMethod="crop");
+	zoom: 1;
+}
+#Sidebar h3 {
+	background: none;
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/sidebarbox_header.png", sizingMethod="crop");
+	zoom: 1;
+}
+#FooterContainer {
+	background: none;
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/footer_bg.png", sizingMethod="crop");
+	zoom: 1;
+}
+.blogSummary {
+	background: none;
+	filter:	progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/new/post_cap.png", sizingMethod="crop");
+	zoom: 1;
+}

@@ -1,0 +1,55 @@
+.product_details{
+	width: 220px;
+	float: right;
+	color: #666;
+	overflow: hidden;
+}
+.price_display{
+	font-weight:bold;
+	font-size:1.2em;
+}
+.featured,
+.quantityBox {
+	border: 1px solid #666;
+	padding: 5px;
+	background: #fafafa;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 0.9em;
+}
+	.featured {
+	}
+		.quantityBox a {
+			vertical-align: middle;
+		}
+		.quantityBox a:hover {
+			text-decoration: none !important;
+		}
+	.productActions {
+		margin-top: 10px;
+		margin: 0 !important;
+		padding: 0;
+	}
+		.productActions li {
+			text-align: right;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.quantityBox .productActions a {
+			line-height: 1.5em;
+			font-weight: normal;
+		}
+
+
+form#options label {
+	font-size: 10px;
+}
+
+form#options fieldset input#Quantity {
+	width:30px;
+}
+.productContent {
+	width: 300px;
+}

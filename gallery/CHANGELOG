@@ -1,0 +1,11 @@
+0.2.2
+
+GalleryPage deleting JS error fixed
+Gallery and lightwindow image border problem fixed
+Saving problem fixed with SilverStripe 2.2.0
+Upgrading work from version 0.1 done
+GalleryPage delete problem fixed with SilverStripe 2.2.0
+Default Image remove problem fixed with SilverStripe 2.2.0
+GalleryPage layout added
+In the extensions tab, image files are now shown by default
+Option to sort photos by title, or date uploaded

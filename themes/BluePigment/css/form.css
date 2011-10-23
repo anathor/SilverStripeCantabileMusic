@@ -1,0 +1,61 @@
+form {
+	margin: 10px 15px;
+	padding: 10px;
+	border: 1px solid #0065C6;
+	background-color: #1E89DC;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin: .4em 0;
+}
+input {
+	padding: .3em;
+	border: 1px solid #eee;
+	font: normal 1em Verdana, sans-serif;
+	color:#777;
+}
+textarea {
+	width: 55%;
+	padding: .3em;
+	font: normal 1em/1.5em Verdana, sans-serif;
+	border: 1px solid #eee;
+	height: 10em;
+	display:block;
+	color:#777;
+}
+input.button {
+	font: bold 1em Arial, Sans-serif;
+	margin: 0;
+	padding: .25em .3em;
+	color: #FFF;
+	background: #A2CC00;
+	border: 2px solid #8EB200;
+}
+.searchform {
+	background-color: transparent;
+	border: none;
+	margin: 0 0 0 10px;
+	padding: 0 0 1.5em 0;
+	width: 18em;
+}
+.searchform p {
+	margin: 0;
+	padding: 0;
+}
+.searchform input.textbox {
+	width: 11em;
+	color: #777;
+	padding: .4em;
+	border: 1px solid #E5E5E5;
+	vertical-align: top;
+}
+.searchform input.button {
+	width: 60px;
+	vertical-align: top;
+}

@@ -1,0 +1,11 @@
+#FileListing dt {
+	font-weight: bold;
+	margin: 0.5em 0 0 0;
+	padding: 0;
+}
+
+#FileListing dd {
+	font-weight: normal;
+	margin: 0.3em 0 0.5em 20px;
+	padding: 0;
+}

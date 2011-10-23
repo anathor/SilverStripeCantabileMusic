@@ -1,0 +1,80 @@
+#Sidebar {
+	max-width: 180px;
+	position: absolute;
+	top: 350px;
+	margin: 0 0 0 500px;
+}
+/* the following rules apply only to IE7 */
+*+html #Sidebar{
+	margin: 0 0 0 50px;
+}
+#Sidebar ul {
+	list-style: none;
+	padding-bottom: 20px;
+}
+/* Product list and product page css */
+
+.product_summary #ProductList {
+	color: #666;
+	list-style:none;
+	float:left;
+	width:99%;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+.product_summary .featureTitle,
+.product_summary .productGroupTitle {
+	font-size: 1.05em;
+	font-weight: normal;
+	border-bottom: 1px solid #d0d0d0;
+	line-height: 2em;
+	margin-bottom: 3px;
+}
+
+.product_summary li.productItem {
+	float:left;
+	width:140px;
+	overflow:hidden;
+	margin: 0 3px;
+	font-size:1.0em;
+	padding: 1em;
+	background:#fafafa;
+	border: 1px solid #d0d0d0;
+}
+
+.product_summary .productTitle {
+	font-size:1.2em;
+	margin-top: 1em;
+}
+.price_display{
+	font-weight:bold;
+	line-height: 1.5em;
+}
+
+.quantityBox {
+	font-size: 0.9em;
+}
+	.featured {
+	}
+		.quantityBox a {
+			vertical-align: middle;
+		}
+		.quantityBox a:hover {
+			text-decoration: none !important;
+		}
+	.productActions {
+		margin-top: 10px;
+		margin: 0 !important;
+		padding: 0;
+	}
+		.productActions li {
+			text-align: right;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.quantityBox .productActions a {
+			line-height: 1.5em;
+			font-weight: normal;
+		}

@@ -1,0 +1,2 @@
+<p><a href="http://silverstripe.com/theme-khaki-kraze/">Khaki
+Kraze theme</a> | Powered by <a href="http://www.silverstripe.com" title="This site runs on the SilverStripe CMS">SilverStripe Open Source CMS</a></p>

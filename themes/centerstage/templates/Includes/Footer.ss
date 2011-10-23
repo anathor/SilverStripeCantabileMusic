@@ -1,0 +1,2 @@
+  <p id="legal">&copy;2007 Center Stage. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free
+      CSS Templates</a>. Theme by <a href="http://silverstripe.com/ForumMemberProfile/show/2627">grilldan</a>.</p>

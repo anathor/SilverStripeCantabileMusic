@@ -1,0 +1,7 @@
+Login Widget 0.1
+19.7.2008
+By Jeremy Shipman jeremy@burnbright.co.nz
+
+Released under the BSD license. 
+
+Extract this to your SilverStripe root directory and run "db/build", then visit a page with widgets enabled in the CMS and drag and drop the Login box to the right.

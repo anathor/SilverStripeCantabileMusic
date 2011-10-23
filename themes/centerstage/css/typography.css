@@ -1,0 +1,68 @@
+.typography h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #3F586B;
+}
+.typography h1 {
+	font-size: 197%;
+}
+.typography h2 {
+	font-size: 167%;
+}
+.typography h3 {
+	font-size: 100%;
+	font-weight: bold;
+}
+.typography a {
+	color: #FF5723;
+}
+.typography a:hover {
+	text-decoration: none;
+	color: #1777B1;
+}
+.typography #logo h1, #logo h2 {
+	text-align: center;
+}
+.typography #logo h1 {
+	padding-top: 40px;
+	font-size: 350%;
+}
+.typography #logo h2 {
+	font-size: 150%;
+}
+.typography #logo a {
+	text-decoration: none;
+	color: #3F586B;
+}
+.typography #menu a {
+	padding: 0 20px;
+	text-decoration: none;
+	font-size: 136%;
+	font-weight: bold;
+	color: #610720;
+}
+.typography #menu a:hover {
+	text-decoration: underline;
+}
+.typography #menu .active a {
+	color: #FFFFFF;
+}
+.typography .boxed h3 {
+	margin: 0;
+}
+.typography .boxed p, .boxed ul, .boxed ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+.typography #footer p {
+	margin: 0;
+	text-align: center;
+	line-height: normal;
+	font-size: 85%;
+	color: #FFFFFF;
+}
+.typography #footer a {
+	color: #FFFFFF;
+}
