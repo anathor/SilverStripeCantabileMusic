@@ -34,6 +34,26 @@ GoogleAnalyzer::activate('SiteConfig');
 //Email::setAdminEmail('ben@playedinane.com');
 
 
+//Payment gateway
+Payment::set_site_currency('AUD');
+Geoip::$default_country_code = "AU";
+i18n::set_locale('en_AU');
+setlocale (LC_TIME, 'en_AU@dollar', 'en_AU.UTF-8', 'en_AU', 'au', 'au');
+
+Payment::set_supported_methods(array(
+  'ChequePayment' => 'Cheque Or Pay On Site',
+  'PayPalExpressCheckoutPayment' => 'PayPal Express (Credit Card)'
+));
+
+PayPalExpressCheckoutPayment::set_test_config_details(
+  'natali_1286679120_biz_api1.cantabilemusic.com.au',
+  '4GBQRRLZWGQ6UK5P',
+  'AFcWxV21C7fd0v3bYYYRCpSSRl31A60z4KZ-pOAM4X-1SL4TPgxI-LP.'
+);
+
+PayPalPayment::set_test_mode('your seller account email address');
+//PayPalPayment::set_account_email('your PayPal account email address');
+
 // copy the lines below to your mysite/_config.php file and set as required.
 // __________________________________START ECOMMERCE MODULE CONFIG __________________________________
 //The configuration below is not required, but allows you to customise your ecommerce application - check for the defalt value first.
