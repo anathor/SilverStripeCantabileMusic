@@ -24,7 +24,7 @@ MySQLDatabase::set_connection_charset('utf8');
 SSViewer::set_theme('blackcandy');
 
 // Set the site locale
-i18n::set_locale('en_US');
+i18n::set_locale('en_AU');
 
 // enable nested URLs for this site (e.g. page/sub-page/)
 SiteTree::enable_nested_urls();
@@ -41,33 +41,26 @@ i18n::set_locale('en_AU');
 setlocale (LC_TIME, 'en_AU@dollar', 'en_AU.UTF-8', 'en_AU', 'au', 'au');
 
 Payment::set_supported_methods(array(
-  'ChequePayment' => 'Cheque Or Pay On Site',
+//  'ChequePayment' => 'Cheque Or Pay On Site',
   'PayPalExpressCheckoutPayment' => 'PayPal Express (Credit Card)'
 ));
 
-PayPalExpressCheckoutPayment::set_test_config_details(
+PayPalExpressCheckoutPayment::set_config_details(
   'natali_1286679120_biz_api1.cantabilemusic.com.au',
   '4GBQRRLZWGQ6UK5P',
   'AFcWxV21C7fd0v3bYYYRCpSSRl31A60z4KZ-pOAM4X-1SL4TPgxI-LP.'
 );
 
-PayPalPayment::set_test_mode('your seller account email address');
+PayPalPayment::set_test_mode('natali_1286679120_biz_api1.cantabilemusic.com.au');
 //PayPalPayment::set_account_email('your PayPal account email address');
 
 // copy the lines below to your mysite/_config.php file and set as required.
 // __________________________________START ECOMMERCE MODULE CONFIG __________________________________
 //The configuration below is not required, but allows you to customise your ecommerce application - check for the defalt value first.
 // * * * DEFINITELY MUST SET
-//Order::set_email("your name <sales@myshop.com>);
-//Order::set_receipt_subject("thank you for your order at www.myshop.com");
+Order::set_email("Cantabile Music <natalie@cantabilemusic.com.au>);
+Order::set_receipt_subject("thank you for your order at www.cantabilemusic.com.au");
 //Order::set_modifiers(array("MyModifierOne", "MyModifierTwo");
-
-
-// * * * HIGHLY RECOMMENDED SETTINGS NON-ECOMMERCE
-//Payment::set_site_currency('NZD');
-//Geoip::$default_country_code = "NZ";
-//i18n::set_locale('en_NZ');
-//setlocale (LC_TIME, 'en_NZ@dollar', 'en_NZ.UTF-8', 'en_NZ', 'nz', 'nz');
 
 // * * * ECOMMERCE I18N SETTINGS
 //EcommerceCurrency::setDecimalDelimiter(','); //for Money formating
@@ -75,17 +68,17 @@ PayPalPayment::set_test_mode('your seller account email address');
 //Object::useCustomClass('SS_Datetime','I18nDatetime', true);
 
 // * * * SHOPPING CART AND ORDER
-//ShoppingCart::set_fixed_country_code("NZ"); //always use the same country code
+ShoppingCart::set_fixed_country_code("AU"); //always use the same country code
 //Order::set_table_overview_fields(array('Total' => 'Total','Status' => 'Status'));//
 //Order::set_maximum_ignorable_sales_payments_difference(0.001);//sometimes there are small discrepancies in total (for various reasons)- here you can set the max allowed differences
-//Order::set_order_id_start_number(1234567);//sets a start number for order ID, so that they do not start at one.
+Order::set_order_id_start_number(53647);//sets a start number for order ID, so that they do not start at one.
 //Order::set_cancel_before_payment(false); //soon to be depreciated
 //Order::set_cancel_before_processing(false); //soon to be depreciated
 //Order::set_cancel_before_sending(false); //soon to be depreciated
 //Order::set_cancel_after_sending(false); //soon to be depreciated
 
-//OrderForm::set_user_membership_optional(); //optional for user to become a member
-//OrderForm::set_force_membership(); //all users must become members if true, or won't become members if false
+OrderForm::set_user_membership_optional(true); //optional for user to become a member
+OrderForm::set_force_membership(false); //all users must become members if true, or won't become members if false
 
 //OrderManipulation::set_allow_cancelling(); //shows a cancel button on the order page
 //OrderManipulation::set_allow_paying(); //shows a payment form
@@ -105,7 +98,7 @@ PayPalPayment::set_test_mode('your seller account email address');
 
 // * * * CHECKOUT
 //ExpiryDateField::set_short_months(true); //uses short months (e.g. Jan instead of january) for credit card expiry date.
-//OrderFormWithoutShippingAddress::set_fixed_country_code("NZ"); //country is fixed
+OrderFormWithoutShippingAddress::set_fixed_country_code("AU"); //country is fixed
 //OrderFormWithoutShippingAddress::set_postal_code_url("http://maps.google.com"); //link that can be used to check postal code
 //OrderFormWithoutShippingAddress::set_postal_code_label("click here to check your postal code"); //label for link that can be used to check postal code
 //OrderFormWithoutShippingAddress::set_login_invite_alternative_text('<a href="http://www.mysite.com/Security/login/?BackURL=">If you are a member then please log in.</a>); //label for link that can be used to check postal code
