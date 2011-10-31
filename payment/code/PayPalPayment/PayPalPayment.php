@@ -180,8 +180,8 @@ class PayPalPayment extends Payment {
 		$inputs['business'] = self::$test_mode ? self::$test_account_email : self::$account_email;
 		$inputs['custom'] = $this->ID . '-' . $this->AuthorisationCode; 
 		// Add Here The Shipping And/Or Taxes
-		$inputs['currency_code'] = $this->Currency;
-
+		//$inputs['currency_code'] = $this->Currency;
+		$inputs['currency_code'] = self::site_currency();
 		// 5) Redirection Informations
 
 		$inputs['cancel_return'] = Director::absoluteBaseURL() . PayPalPayment_Handler::cancel_link($inputs['custom']);

@@ -19,7 +19,7 @@
 			<div class="clear"><!-- --></div>
 		</div>
 	<% end_if %>
-
+	<a href="/checkout">Proceed to checkout</a>
 	<% if Products.MoreThanOnePage %>
 	<div id="PageNumbers">
 		<p>
