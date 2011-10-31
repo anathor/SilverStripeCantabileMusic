@@ -1,4 +1,4 @@
-<form target="paypal" id="ProductPurchase" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form target="paypal" id="ProductPurchase" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
 	<!-- a buy now button is represented by the command _xclick -->
 	<input type="hidden" name="cmd" value="_cart" />
 	<input type="hidden" name="business" value="carrieandpaul@clear.net.nz" />
