@@ -58,7 +58,7 @@ PayPalPayment::set_test_mode('natali_1286679120_biz_api1.cantabilemusic.com.au')
 // __________________________________START ECOMMERCE MODULE CONFIG __________________________________
 //The configuration below is not required, but allows you to customise your ecommerce application - check for the defalt value first.
 // * * * DEFINITELY MUST SET
-Order::set_email("Cantabile Music <natalie@cantabilemusic.com.au>);
+Order::set_email("Cantabile Music <natalie@cantabilemusic.com.au>");
 Order::set_receipt_subject("thank you for your order at www.cantabilemusic.com.au");
 //Order::set_modifiers(array("MyModifierOne", "MyModifierTwo");
 
@@ -68,7 +68,7 @@ Order::set_receipt_subject("thank you for your order at www.cantabilemusic.com.a
 //Object::useCustomClass('SS_Datetime','I18nDatetime', true);
 
 // * * * SHOPPING CART AND ORDER
-ShoppingCart::set_fixed_country_code("AU"); //always use the same country code
+//ShoppingCart::set_fixed_country_code("AU"); //always use the same country code
 //Order::set_table_overview_fields(array('Total' => 'Total','Status' => 'Status'));//
 //Order::set_maximum_ignorable_sales_payments_difference(0.001);//sometimes there are small discrepancies in total (for various reasons)- here you can set the max allowed differences
 Order::set_order_id_start_number(53647);//sets a start number for order ID, so that they do not start at one.

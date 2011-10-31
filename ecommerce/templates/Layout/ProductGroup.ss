@@ -1,4 +1,3 @@
-<% include ProductMenu %>
 
 <div id="ProductGroup">
 	<h1 class="pageTitle">$Title</h1>
@@ -11,9 +10,6 @@
 
 	<% if Products %>
 		<div id="Products" class="category">
-			<div class="resultsBar typography">
-				<% if SortLinks %><span class="sortOptions">Sort by <% control SortLinks %><a href="$Link" class="sortlink $Current">$Name</a> <% end_control %></span><% end_if %>
-			</div>
 			<div class="clear"><!-- --></div>
 			<ul class="productList">
 				<% control Products %>

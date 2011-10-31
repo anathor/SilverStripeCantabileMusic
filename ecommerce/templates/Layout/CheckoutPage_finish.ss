@@ -6,14 +6,17 @@
 			<% end_control %>
 		<% end_if %>	
 		
-		<% if Message %>
-			<p class="message $MessageType">$Message</p>
-		<% end_if %>
-	
 		<% if Order %>
 			<% control Order %>				
 				<% include Order %>
 			<% end_control %>
 		<% end_if %>
+		<div>
+			<p>
+	                        <% control Order %>
+					<center><img src="/barcode.php?width=400&barcode=$ID&quality=75"></center>
+                        	<% end_control %>
+			</p>
+		</div>
 	</div>
 </div>

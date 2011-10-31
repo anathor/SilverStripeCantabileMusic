@@ -11,11 +11,7 @@
 		<% control Items %>
 		<tr  class="itemRow $EvenOdd $FirstLast">
 			<td class="product title" scope="row">
-				<% if Link %>
-					<a href="$Link" title="<% sprintf(_t("READMORE","Click here to read more on &quot;%s&quot;"),$Title) %>">$ProductTitle</a>
-				<% else %>
-					$ProductTitle
-				<% end_if %>
+				$ProductTitle
 			</td>
 			<td class="center quantity">$Quantity</td>
 			<td class="right unitprice">$UnitPrice.Nice</td>

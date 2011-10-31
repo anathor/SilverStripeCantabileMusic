@@ -15,11 +15,7 @@
 				<% if ShowInTable %>
 					<tr id="$TableID" class="$Classes">
 						<td<% if Link %><% else %> id="$TableTitleID"<% end_if %> class="product title" scope="row">
-							<% if Link %>
-								<a id="$TableTitleID" href="$Link" title="<% sprintf(_t("READMORE","Click here to read more on &quot;%s&quot;"),$TableTitle) %>">$TableTitle</a>
-							<% else %>
-								$TableTitle
-							<% end_if %>
+							$TableTitle
 						</td>
 						<td class="center quantity">
 							$QuantityField
@@ -36,13 +32,6 @@
 					</tr>
 				<% end_if %>
 			<% end_control %>
-
-			<tr class="gap summary">
-				<td colspan="2" scope="row"><% _t("SUBTOTAL","Sub-total") %></td>
-				<td>&nbsp;</td>
-				<td class="right" id="$TableSubTotalID">$SubTotal.Nice</td>
-				<td>&nbsp;</td>
-			</tr>
 
 			<% if Modifiers %>
 			<% control Modifiers %>

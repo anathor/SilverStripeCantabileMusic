@@ -57,10 +57,6 @@ class OrderForm extends Form {
 			$requiredFields[] = 'ShippingCountry';
 		} else {
 			$countryField = $memberFields->fieldByName('Country');
-			$shippingFields = new FormAction_WithoutLabel('useDifferentShippingAddress', _t('OrderForm.useDifferentShippingAddress', 'Use Different Shipping Address'));
-			//Need to to this because 'FormAction_WithoutLabel' has no text on the actual button
-			$shippingFields->setButtonContent(_t('OrderForm.useDifferentShippingAddress', 'Use Different Shipping Address'));
-			$shippingFields->useButtonTag = true;
 		}
 		
 		if($countryField){
@@ -78,26 +74,6 @@ class OrderForm extends Form {
 		$rightFields->setID('RightOrder');
 		
 		
-		if(!$member) {
-			$rightFields->push(new HeaderField(_t('OrderForm.MembershipDetails','Membership Details'), 3));
-			$rightFields->push(new LiteralField('MemberInfo', '<p class="message warning">'._t('OrderForm.MemberInfo','If you are already a member please')." <a href=\"Security/login?BackURL=" . CheckoutPage::find_link(true) . "/\">"._t('OrderForm.LogIn','log in').'</a>.</p>'));
-			$rightFields->push(new LiteralField('AccountInfo', '<p>'._t('OrderForm.AccountInfo','Please choose a password, so you can login and check your order history in the future').'</p><br/>'));
-			$rightFields->push(new FieldGroup($pwf = new ConfirmedPasswordField('Password', _t('OrderForm.Password','Password'))));
-			
-			//if user doesn't fill out password, we assume they don't want to become a member
-			//TODO: allow different ways of specifying that you want to become a member
-			if(self::$user_membership_optional){ $pwf->setCanBeEmpty(true);	}
-			
-			if(self::$force_membership || !self::$user_membership_optional){
-				$requiredFields[] = 'Password[_Password]';
-				$requiredFields[] = 'Password[_ConfirmPassword]';
-				//TODO: allow extending this to provide other ways of indicating that you want to become a member
-			}
-			
-		}else{
-			$rightFields->push(new LiteralField('MemberInfo', '<p class="message good">'.sprintf(_t('OrderForm.LoggedInAs','You are logged in as %s.'),$member->getName())." <a href=\"Security/logout?BackURL=" . CheckoutPage::find_link(true) . "/\">"._t('OrderForm.LogOut','log out').'</a>.</p>'));
-		}
-
 		// 2) Payment fields
 		$currentOrder = ShoppingCart::current_order();
 		$totalobj = DBField::create('Currency',$currentOrder->Total()); //should instead be $totalobj = $currentOrder->dbObject('Total');

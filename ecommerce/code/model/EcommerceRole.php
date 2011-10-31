@@ -188,14 +188,7 @@ class EcommerceRole extends DataObjectDecorator {
 			new HeaderField(_t('EcommerceRole.PERSONALINFORMATION','Personal Information'), 3),
 			new TextField('FirstName', _t('EcommerceRole.FIRSTNAME','First Name')),
 			new TextField('Surname', _t('EcommerceRole.SURNAME','Surname')),
-			new TextField('HomePhone', _t('EcommerceRole.HOMEPHONE','Phone')),
-			new TextField('MobilePhone', _t('EcommerceRole.MOBILEPHONE','Mobile')),
-			new EmailField('Email', _t('EcommerceRole.EMAIL','Email')),
-			new TextField('Address', _t('EcommerceRole.ADDRESS','Address')),
-			new TextField('AddressLine2', _t('EcommerceRole.ADDRESSLINE2','&nbsp;')),
-			new TextField('City', _t('EcommerceRole.CITY','City')),
-			new TextField('PostalCode', _t('EcommerceRole.POSTALCODE','Postal Code')),
-			new DropdownField('Country', _t('EcommerceRole.COUNTRY','Country'), Geoip::getCountryDropDown(), self::find_country())
+			new EmailField('Email', _t('EcommerceRole.EMAIL','Email'))
 		);
 		$this->owner->extend('augmentEcommerceFields', $fields);
 		return $fields;
@@ -212,9 +205,6 @@ class EcommerceRole extends DataObjectDecorator {
 			'FirstName',
 			'Surname',
 			'Email',
-			'Address',
-			'City',
-			'Country'
 		);
 		$this->owner->extend('augmentEcommerceRequiredFields', $fields);
 		return $fields;
