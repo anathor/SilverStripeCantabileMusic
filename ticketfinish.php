@@ -113,21 +113,18 @@
 							{
 								$adult = $keyarray['quantity1'];
 							}
-							else
+							else if ($keyarray['item_name1'] == "Child Ticket")
 							{
 								$child = $keyarray['quantity1'];
 							}
 
-							if (in_array('item_name2', $keyarray))
+							if ($keyarray['item_name2'] == "Adult Ticket")
 							{
-								if ($keyarray['item_name2'] == "Adult Ticket")
-								{
-									$adult = $keyarray['quantity2'];
-								}
-								else
-								{
-									$child = $keyarray['quantity2'];
-								}
+								$adult = $keyarray['quantity2'];
+							}
+							else if ($keyarray['item_name2'] == "Child Ticket")
+							{
+								$child = $keyarray['quantity2'];
 							}
 
 							$sql = "insert into Ticket(TxnId, Email, AdultTickets, ChildTickets, PayerId, Date, Status, Total) VALUES('".$tx."', '".$keyarray['payer_email']."', ".$adult.",".$child.", '".$keyarray['payer_id']."', '".$keyarray['payment_date']."', '".$keyarray['payment_status']."', '".$keyarray['mc_gross']."');";
