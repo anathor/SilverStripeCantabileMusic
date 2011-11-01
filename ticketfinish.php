@@ -34,7 +34,7 @@
 				<li><a href="/private-music-tuition/" title="Go to the Private Music Tuition page" class="link"><span>Private Music Tuition</span></a></li>
 				<li><a href="/sutherland-shire-early-childhood-music/" title="Go to the Sutherland Shire Early Childhood Music page" class="link"><span>Early Childhood</span></a></li>
 				<li><a href="/contact-us/" title="Go to the Contact Us page" class="link"><span>Contact Us</span></a></li>
-				<li><a href="/tickets/" title="Go to the Tickets page" class="current"><span>Tickets</span></a></li>
+				<li><a href="/end-of-year-concert-2011-ticket-sales/" title="Go to the Tickets page" class="current"><span>Tickets</span></a></li>
 			</ul>
 		</div>
 		<div class="clear">
@@ -155,6 +155,10 @@
 								print '</li>';
 							}
 							print '</ul>';
+
+							print '<p>Tickets are non refundable</p>';
+
+							print "<p>Sutherland Shire Children's Choir<br>End of Year Concert 2011</p>";
 
 							print '<p>4pm Sunday 27th November 2011<br>Engadine Community Centre Auditorium<br>1034-1036 Old Princes Highway Engadine</p>';
 
