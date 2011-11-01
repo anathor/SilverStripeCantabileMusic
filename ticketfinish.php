@@ -23,8 +23,6 @@
 	<div id="Container">
 		<div id="Header">
 			<center><img src="/assets/Pictures/headersml.png" />
-			<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.cantabilemusic.com.au" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px">
-			</iframe>
 			</center>
 			<p>
 			</p>
