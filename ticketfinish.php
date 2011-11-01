@@ -139,7 +139,7 @@
 
 							$sql = "insert into Ticket(TxnId, Email, AdultTickets, ChildTickets, PayerId, Date, Status, Total) VALUES('".$tx."', '".$keyarray['payer_email']."', ".$adult.",".$child.", '".$keyarray['payer_id']."', '".$keyarray['payment_date']."', '".$keyarray['payment_status']."', '".$keyarray['mc_gross']."');";
 							$rs = mysql_query($sql);
-							print $sql.'<br>';
+							//print $sql.'<br>';
 						}
 						else
 						{
