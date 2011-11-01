@@ -8,7 +8,7 @@ The PayPal Mini Cart is a great way to improve your PayPal integration by creati
 Interested? Let’s get you setup
 -------------------------------
 
-1. Start with a PayPal [Add to Cart Button](https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=p/xcl/web-accept-to-sc-button-outside)
+1. Start with a PayPal [Add to Cart Button](https://www.paypal.com/cgi-bin/webscr?cmd=p/xcl/web-accept-to-sc-button-outside)
 2. Download the [Mini Cart JavaScript](https://github.com/jeffharrell/MiniCart/archives/master)
 3. Next, include the following snippet of JavaScript code into your HTML file before the closing &lt;/body&gt; tag. Make sure to point to your downloaded copy of minicart.js!
 
@@ -44,7 +44,7 @@ The base path of your website to set the cookie to (useful for shared website ho
 Boolean to determine if the cart should "peek" when it's hidden with items. Default true.
 
 `paypalURL`  
-The PayPal URL to use if you are accessing sandbox or another version of the PayPal website. Defaults to https://www.sandbox.paypal.com/cgi-bin/webscr.
+The PayPal URL to use if you are accessing sandbox or another version of the PayPal website. Defaults to https://www.paypal.com/cgi-bin/webscr.
 
 `strings`  
 An object of localizable text strings used:  

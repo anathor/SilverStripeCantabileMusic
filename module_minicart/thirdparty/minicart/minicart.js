@@ -62,7 +62,7 @@ PAYPAL.apps = PAYPAL.apps || {};
 		/**
 		 * The URL of the PayPal website
 		 */
-		paypalURL: 'https://www.sandbox.paypal.com/cgi-bin/webscr',		
+		paypalURL: 'https://www.paypal.com/cgi-bin/webscr',		
 		
 		/**
 		 * The base URL to the visual assets
