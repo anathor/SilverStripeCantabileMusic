@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<base href="http://ec2-176-32-77-19.ap-northeast-1.compute.amazonaws.com/">
 <!--[if lte IE 6]></base><![endif]-->
 <title>Tickets &raquo; Cantabile Music</title>
 <meta name="generator" content="SilverStripe - http://silverstripe.org" />
@@ -12,13 +11,13 @@
             @import url(themes/blackcandy/css/ie6.css);
            </style>
         <![endif]-->
-<link rel="stylesheet" type="text/css" href="http://ec2-176-32-77-19.ap-northeast-1.compute.amazonaws.com/themes/blackcandy/css/layout.css?m=1320039647" />
-<link rel="stylesheet" type="text/css" href="http://ec2-176-32-77-19.ap-northeast-1.compute.amazonaws.com/themes/blackcandy/css/typography.css?m=1312938671" />
-<link rel="stylesheet" type="text/css" href="http://ec2-176-32-77-19.ap-northeast-1.compute.amazonaws.com/themes/blackcandy/css/form.css?m=1312938671" />
+<link rel="stylesheet" type="text/css" href="/themes/blackcandy/css/layout.css?m=1320039647" />
+<link rel="stylesheet" type="text/css" href="/themes/blackcandy/css/typography.css?m=1312938671" />
+<link rel="stylesheet" type="text/css" href="/themes/blackcandy/css/form.css?m=1312938671" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="http://ec2-176-32-77-19.ap-northeast-1.compute.amazonaws.com/module_minicart/thirdparty/minicart/minicart.js?m=1320065472"></script>
+<script type="text/javascript" src="/module_minicart/thirdparty/minicart/minicart.js?m=1320065472"></script>
 <script type="text/javascript">PAYPAL.apps.MiniCart.reset();</script>
 <div id="BgContainer">
 	<div id="Container">
@@ -50,11 +49,11 @@
 					{
 						$tx = $_GET['tx'];
 						// Check for ticket in db first
-						
+
 						$dbusername = "cantabilemusic";
 						$dbpassword = "DT5D9QmTMLK4a8hF";
 						$database = "Tickets";
-						
+
 						$gotDetail = false;
 
 						if( !$con = @mysql_connect('localhost', $dbusername, $dbpassword) )
@@ -67,12 +66,12 @@
 						mysql_select_db($database);
 
 						$sql = "select * from Ticket where TxnId='". $tx ."'";
-						
+
 						$rs = mysql_query($sql);
 
 						$keyarray = array();
 						if(mysql_num_rows($rs) == 0)
-						{						
+						{
 							// Init cURL
 							$request = curl_init();
 
@@ -104,18 +103,19 @@
 								$keyarray[urldecode($key)] = urldecode($val);
 								$valName = urldecode($key);
 								$valVal = urldecode($val);
+								//print $valName.' - '.$valVal.'<br>';
 							}
-							
+
 							if (in_array('payment_status', $keyarray))
 							{
 								$gotDetail = true;
 							}
-							
+
 							// insert into db
-							
+
 							$adult = 0;
 							$child = 0;
-							
+
 							if ($keyarray['item_name1'] == "Adult Ticket")
 							{
 								$adult = $keyarray['quantity1'];
@@ -124,7 +124,7 @@
 							{
 								$child = $keyarray['quantity1'];
 							}
-							
+
 							if (in_array('item_name2', $keyarray))
 							{
 								if ($keyarray['item_name2'] == "Adult Ticket")
@@ -136,9 +136,10 @@
 									$child = $keyarray['quantity2'];
 								}
 							}
-							
+
 							$sql = "insert into Ticket(TxnId, Email, AdultTickets, ChildTickets, PayerId, Date, Status, Total) VALUES('".$tx."', '".$keyarray['payer_email']."', ".$adult.",".$child.", '".$keyarray['payer_id']."', '".$keyarray['payment_date']."', '".$keyarray['payment_status']."', '".$keyarray['mc_gross']."');";
 							$rs = mysql_query($sql);
+							print $sql.'<br>';
 						}
 						else
 						{
@@ -150,9 +151,9 @@
 							$keyarray['item_name2'] = "Child Ticket";
 							$keyarray['quantity2'] = $row['ChildTickets'];
 						}
-						
+
 						if ($gotDetail)
-						{						
+						{
 							print '<ul>';
 							$cart_items = $keyarray['num_cart_items'];
 							for ($j=1; $j <= $cart_items; $j++)
@@ -172,16 +173,16 @@
 							print 'Failed to find transaction, please contact <a href="mailto://natalie@cantabilemusic.com.au">Cantabile Music</a>';
 						}
 					}
-				?> 
+				?>
 				<a href="#" id="PrintButton">Print</a>
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$('#PrintButton').click(function() 
+						$('#PrintButton').click(function()
 						{
 							window.print();
 							return false;
 					 	});
-					}); 				
+					});
 				</script>
 				</div>
 		</div>
