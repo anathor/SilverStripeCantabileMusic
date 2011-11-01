@@ -1,4 +1,4 @@
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 	<fieldset>
 		<input type="hidden" name="cmd" value="_cart" />
 		<input type="hidden" name="add" value="1" />

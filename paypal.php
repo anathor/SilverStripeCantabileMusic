@@ -9,7 +9,7 @@ if(isset($_GET['tx']))
 	// Set request options
 	curl_setopt_array($request, array
 	(
-	  CURLOPT_URL => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+	  CURLOPT_URL => 'https://www.paypal.com/cgi-bin/webscr',
 	  CURLOPT_POST => TRUE,
 	  CURLOPT_POSTFIELDS => http_build_query(array
 	    (

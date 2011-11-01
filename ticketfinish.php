@@ -78,13 +78,13 @@
 							// Set request options
 							curl_setopt_array($request, array
 							(
-							  CURLOPT_URL => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+							  CURLOPT_URL => 'https://www.paypal.com/cgi-bin/webscr',
 							  CURLOPT_POST => TRUE,
 							  CURLOPT_POSTFIELDS => http_build_query(array
 							    (
 							      'cmd' => '_notify-synch',
 							      'tx' => $tx,
-							      'at' => '8p_kpbKXvlLjHf-kzzelaQh8MFALG4YMA-v-6Gxbtq3w2896oSXnINkEyHm',
+							      'at' => 'dNuuPmjSn5Rg8LayH81bUoAr0sFwKBTZhNh_DAEId0aOTk-IxNQKlcDSF3K',
 							    )),
 							  CURLOPT_RETURNTRANSFER => TRUE
 							));
@@ -104,11 +104,6 @@
 								$valName = urldecode($key);
 								$valVal = urldecode($val);
 								//print $valName.' - '.$valVal.'<br>';
-							}
-
-							if (in_array('payment_status', $keyarray))
-							{
-								$gotDetail = true;
 							}
 
 							// insert into db
@@ -139,7 +134,7 @@
 
 							$sql = "insert into Ticket(TxnId, Email, AdultTickets, ChildTickets, PayerId, Date, Status, Total) VALUES('".$tx."', '".$keyarray['payer_email']."', ".$adult.",".$child.", '".$keyarray['payer_id']."', '".$keyarray['payment_date']."', '".$keyarray['payment_status']."', '".$keyarray['mc_gross']."');";
 							$rs = mysql_query($sql);
-							//print $sql.'<br>';
+							$gotDetail = true;
 						}
 						else
 						{
@@ -165,6 +160,8 @@
 								print '</li>';
 							}
 							print '</ul>';
+
+							print '<p>4pm Sunday 27th November 2011<br>Engadine Community Centre Auditorium<br>1034-1036 Old Princes Highway Engadine</p>';
 
 							print '<center><img src="/barcode.php?width=600&barcode='.$tx.'&quality=75"></center>';
 						}
