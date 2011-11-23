@@ -1,0 +1,11 @@
+Facebook like box Widget for SilverStripe
+Version: 0.1
+Release Date: Jan. 17th, 2008
+Author: Karthikeyan.K <karthi.intel2004@gmail.com>
+License: BSD License
+
+Installation:
+	Extract this to your SilverStripe root directory.
+	Run db/build
+	Visit the blog page in the CMS.
+	Drag and drop the "Facebook Like box" to the right.

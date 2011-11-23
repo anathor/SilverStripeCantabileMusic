@@ -41,7 +41,7 @@
 		</div>
 		<div id="Layout">
 			<div class="typography">
-				<h2>Tickets</h2>
+				<h2>Payment Result</h2>
 				<?php
 					if(isset($_GET['tx']))
 					{
@@ -125,6 +125,12 @@
 							else if ($keyarray['item_name2'] == "Child Ticket")
 							{
 								$child = $keyarray['quantity2'];
+							}
+
+							if ($adult == 0 && $child == 0)
+							{ //probably a fees payment
+								print '<p>Thankyou for your payment.</p>';
+								return;
 							}
 
 							$sql = "insert into Ticket(TxnId, Email, AdultTickets, ChildTickets, PayerId, Date, Status, Total, PayPal) VALUES('".$tx."', '".$keyarray['payer_email']."', ".$adult.",".$child.", '".$keyarray['payer_id']."', '".$keyarray['payment_date']."', '".$keyarray['payment_status']."', '".$keyarray['mc_gross']."', '" .urldecode($response)."');";
